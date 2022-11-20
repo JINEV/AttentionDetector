@@ -13,6 +13,20 @@
   }
 }
 
+.rectangle {
+  display: inline-block;
+  width: 400px;
+  height: 440px;
+  background: #5b5664;
+}
+
+.rectangle2 {
+  display: inline-block;
+  width:1600px;
+  height:800px;
+  background: #127bc2;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,6 +36,26 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.background {
+  /* background-color: #282c34; */
+  background-color: #127bc2;
+}
+
+.background2 {
+  background-color: #127bc2;
+}
+
+.header {
+  font-size: 80px;
+  color: white;
+  text-align: center;
+}
+
+.react-switch {
+  vertical-align: middle;
+  margin-left: 10px;
 }
 
 .App-link {

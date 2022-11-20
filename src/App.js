@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect,
+  } from "react-router-dom";
+import Home from "./components/Home";
+import Control from "./components/controlpanel";
+import Analyze from "./components/Analyze";
+import Results from "./components/results";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // const navigate = useNavigate();
+    // const handleClick = () => {
+    //     navigate("/controlpanel");
+    // }
+    return (
+        <>
+        <Router>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/control" component={Control} />
+                <Route path="/analyze" component={Analyze} />
+                <Route path="/results" component={Results} />
+                <Redirect to="/" /> 
+            </Switch>
+        </Router>
+        </>
+    );
 }
-
+  
 export default App;
